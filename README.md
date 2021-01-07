@@ -18,3 +18,5 @@ Funcionalidades:
 -Cobro de boleto de estacionamiento y boleto perdido
 <br>
 -Tipos de usuario adimin/general
+
+<a href="https://www.loom.com/share/bedca7e6af7247dd9ef7ba969f163454?sharedAppSource=personal_library">Vídeo MiEstacionamiento</a>
