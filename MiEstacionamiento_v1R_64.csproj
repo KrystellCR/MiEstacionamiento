@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2946C965-13A7-49A0-8551-C404CE19B6F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EstacionamientoV4</RootNamespace>
+    <AssemblyName>EstacionamientoV4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>car_23773.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FoxLearn.License">
+      <HintPath>..\..\..\..\Downloads\FoxLearn.License\FoxLearn.License.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\System.Data.SQLite\2012\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="boletoPerdido_datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="boletoPerdido_datos.Designer.cs">
+      <DependentUpon>boletoPerdido_datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="claseGeneradorTickets.cs" />
+    <Compile Include="dialogoBorrarRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogoBorrarRegistros.Designer.cs">
+      <DependentUpon>dialogoBorrarRegistros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRegistration.Designer.cs">
+      <DependentUpon>fmRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarCliente.Designer.cs">
+      <DependentUpon>FormAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBoletoPerdido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBoletoPerdido.Designer.cs">
+      <DependentUpon>FormBoletoPerdido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCobrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCobrarClientes.Designer.cs">
+      <DependentUpon>FormCobrarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfgiracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfgiracion.Designer.cs">
+      <DependentUpon>FormConfgiracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarUsuarios.Designer.cs">
+      <DependentUpon>FormEditarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntrada.Designer.cs">
+      <DependentUpon>FormEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImpresora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImpresora.Designer.cs">
+      <DependentUpon>FormImpresora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInventario.Designer.cs">
+      <DependentUpon>formInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEmergente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaEmergente.Designer.cs">
+      <DependentUpon>VentanaEmergente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="boletoPerdido_datos.resx">
+      <DependentUpon>boletoPerdido_datos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogoBorrarRegistros.resx">
+      <DependentUpon>dialogoBorrarRegistros.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRegistration.resx">
+      <DependentUpon>fmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarCliente.resx">
+      <DependentUpon>FormAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBoletoPerdido.resx">
+      <DependentUpon>FormBoletoPerdido.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCobrarClientes.resx">
+      <DependentUpon>FormCobrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfgiracion.resx">
+      <DependentUpon>FormConfgiracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarUsuarios.resx">
+      <DependentUpon>FormEditarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntrada.resx">
+      <DependentUpon>FormEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImpresora.resx">
+      <DependentUpon>FormImpresora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInventario.resx">
+      <DependentUpon>formInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaEmergente.resx">
+      <DependentUpon>VentanaEmergente.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibreriaValidar\LibreriaValidar.csproj">
+      <Project>{f48e7e93-fb70-43ad-8bd6-5bbd842feba3}</Project>
+      <Name>LibreriaValidar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiLibreriaSqlite\MiLibreriaSqlite.csproj">
+      <Project>{d399db2f-01b5-490c-baee-6e1b7d9d881a}</Project>
+      <Name>MiLibreriaSqlite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\icons8-cierre-de-sesión-redondeado-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-actualizar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-doble-derecha-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-guardar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-imprimir-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-búsqueda-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-objetos-perdidos-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-chevron-izquierda-en-círculo-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-chevron-derecha-en-círculo-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-derecha-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-más-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-más-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-editar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-editar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-basura-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-boleta-de-calificaciones-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icons8-servicios-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\hjk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Estacionamiento.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="car_23773.ico" />
+    <Content Include="icono.ico" />
+    <Content Include="Resources\Estacionamiento.jpg" />
+    <Content Include="Resources\hjk.png" />
+    <Content Include="Resources\icons8-actualizar-32.png" />
+    <Content Include="Resources\icons8-basura-25.png" />
+    <Content Include="Resources\icons8-boleta-de-calificaciones-32.png" />
+    <Content Include="Resources\icons8-búsqueda-32.png" />
+    <Content Include="Resources\icons8-cancelar-25.png" />
+    <Content Include="Resources\icons8-cash-25.png" />
+    <Content Include="Resources\icons8-cash.png" />
+    <Content Include="Resources\icons8-chevron-derecha-en-círculo-48.png" />
+    <Content Include="Resources\icons8-chevron-izquierda-en-círculo-48.png" />
+    <Content Include="Resources\icons8-cierre-de-sesión-redondeado-32.png" />
+    <Content Include="Resources\icons8-derecha-32.png" />
+    <Content Include="Resources\icons8-derecha-321.png" />
+    <Content Include="Resources\icons8-doble-derecha-32.png" />
+    <Content Include="Resources\icons8-editar-25.png" />
+    <Content Include="Resources\icons8-editar-32.png" />
+    <Content Include="Resources\icons8-guardar-32.png" />
+    <Content Include="Resources\icons8-imprimir-32.png" />
+    <Content Include="Resources\icons8-imprimir-321.png" />
+    <Content Include="Resources\icons8-más-25.png" />
+    <Content Include="Resources\icons8-más-32.png" />
+    <Content Include="Resources\icons8-objetos-perdidos-32.png" />
+    <Content Include="Resources\icons8-servicios-32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
